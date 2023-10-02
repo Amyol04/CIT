@@ -11,7 +11,7 @@ usa_least = USA_MIN * cost
 usa_ok = USA_MID * cost 
 usa_norm = USA_NORM * cost 
 
-print(f"{"tip":10}{"value":>10}")
+print(f"{'tip':10}{'value':>10}")
 print("-----------------------")
 print(f"{IRELAND_TIPPING}<10.0%{ireland_tip}<10.2f")
 print(f"{USA_MIN}<10.0%{usa_least}<10.2f")
