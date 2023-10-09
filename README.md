@@ -12,4 +12,4 @@ How to Use
 Explore, learn, and get inspired. Use the code as a resource for your own projects.
 
 Contact
-Feel free to contact me at your.email@example.com or on Twitter @YourTwitterHandle.
+Feel free to contact me at amyoleary404@gmail.com or on Twitter @Amyol404
