@@ -146,18 +146,22 @@ i += 1
 print(copyString) 
 
 # ### 
- 
 
-numSales = int(input("How many do you have?")) 
-counter = 0
- while counter < numSales: # as long as the user does not hit ENTER
-     sale = input ("Sales! (Enter to quit) >>>")
-     sale += name
-     counter += 1
+comRate = .03 
+numSales = int(input("How many sales did you make?"))
+ter = 0
+totalCom = 0
 
-commision = sales * .03
+while counter < numSales: 
+    sale = float(input(salee Value >>>))
+    comission = sale * comRate 
+    totalCom += comission
+    
+    print(f"€{sale :.2f} earned you €{comission:.2f} in commission")
+    counter += 1 
 
-print(commision) 
+print(f"Total earned: €{totalCom:.2f}")
+    
 
 
 
