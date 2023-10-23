@@ -26,3 +26,11 @@ print(string.punctuation)
 letter = x 
 if letter in string.ascii_lowercase: 
     print("this is lower case")
+    
+if letter not in string.ascii_lowercase: 
+    print("this is not lower case")
+    
+####
+
+
+
