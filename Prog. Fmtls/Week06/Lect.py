@@ -32,5 +32,16 @@ if letter not in string.ascii_lowercase:
     
 ####
 
+x = 9
+y = 9.0
+print(id(x))
+print(id(y)) # checks memory! 
+
+print(x == 9) # checks if value is the same.
+print(x is y) # checks if they occupy same memory. Exact same thing 
+
+ 
+
+
 
 
