@@ -50,9 +50,9 @@ print(x is y) # checks if they occupy same memory. Exact same thing
 #names += name # omented operator. 
 # same as names = names + name
  
-####. 
+#### While loop
 
- names = "" 
+names = "" 
 name = input("Name (ENTER to Quit)  >>>")
  while name != "": # as long as the user does not hit ENTER
      names += name
