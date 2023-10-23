@@ -121,4 +121,28 @@ while number != 0:
     
 print(total) 
 
+####
+# make a copy of string w every vowel replaced w 'x'
+
+s = input("Sentence pls >>>")
+i == 0 # trad name for index variable is i
+
+copyString = ""
+numChar = len(s) # number is characters in s
+#s[0] # 0 == A (first letter)
+
+while i < numChar: 
+    if s[i] in "AEOIUaeiou"
+    copyString += ''
+    else:
+    copyString += s[i]
+    
+print(copyString)
+
+
+
+
+
+
+
 
