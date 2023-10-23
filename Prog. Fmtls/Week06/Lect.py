@@ -1,3 +1,5 @@
+
+
 s = "the rain will never stop"
 
 #in operator - is lhs item in lhs item
@@ -60,8 +62,18 @@ name = input("Name (ENTER to Quit)  >>>")
     
 print(names)
  
+##
 
+numNames = int(input("How many do you have?")) 
+counter = 0
+ while counter < numNames: # as long as the user does not hit ENTER
+     name = input ("Name (Enter to quit) >>>")
+     name += name
+     counter += 1
+    
+print(names)
 
+# get names , make string. 
 
 
 
