@@ -146,6 +146,19 @@ i += 1
 print(copyString) 
 
 # ### 
+ 
+
+numSales = int(input("How many do you have?")) 
+counter = 0
+ while counter < numSales: # as long as the user does not hit ENTER
+     sale = input ("Sales! (Enter to quit) >>>")
+     sale += name
+     counter += 1
+
+commision = sales * .03
+
+print(commision) 
+
 
 
 
