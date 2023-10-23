@@ -158,8 +158,10 @@ while counter < numSales:
     totalCom += comission
     
     print(f"€{sale :.2f} earned you €{comission:.2f} in commission")
+    
     counter += 1 
 
+print(output)
 print(f"Total earned: €{totalCom:.2f}")
     
 
