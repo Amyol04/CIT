@@ -74,6 +74,37 @@ counter = 0
 print(names)
 
 # get names , make string. 
+#####
+
+i = 0
+
+while i < 50:
+    print(i)
+    i += 1 
+
+# will go from 0 to 49. 
+
+i = 0
+
+while i < 50:
+    print(i)
+    i -= 1 
+    
+# will go in -0, ect.. . thete for infante loop
+
+i = 0
+
+while i > 50:
+    print(i)
+    i += 1 
+    
+# 0 Trip. Nothing will happen. 
+
+## no do y loop
+
+
+
+
 
 
 
