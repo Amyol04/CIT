@@ -102,16 +102,12 @@ while i > 50:
 
 ## no do y loop
 
+## goes up in 7's. 
 i = 7
 
 while i <= 100:
     print(i)
     i += 7
-    
 
-
-
-
-
-
+###
 
