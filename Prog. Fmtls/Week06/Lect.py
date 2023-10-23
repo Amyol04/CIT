@@ -40,7 +40,28 @@ print(id(y)) # checks memory!
 print(x == 9) # checks if value is the same.
 print(x is y) # checks if they occupy same memory. Exact same thing 
 
+#dont use is , teacher will murder you
  
+#### LOOPPPPPS
+
+#names = "" 
+#name = input("Name (ENTER to Quit)  >>>")
+
+#names += name # omented operator. 
+# same as names = names + name
+ 
+####. 
+
+ names = "" 
+name = input("Name (ENTER to Quit)  >>>")
+ while name != "": # as long as the user does not hit ENTER
+     names += name
+    name = input("Name (ENTER to Quit)>>>")
+    
+print(names)
+ 
+
+
 
 
 
