@@ -123,6 +123,7 @@ print(total)
 
 ####
 # make a copy of string w every vowel replaced w 'x'
+# and punctuatuon marks replace w x 
 
 s = input("Sentence pls >>>")
 i == 0 # trad name for index variable is i
@@ -134,11 +135,14 @@ numChar = len(s) # number is characters in s
 while i < numChar: 
     if s[i] in "AEOIUaeiou"
     copyString += ''
-    else:
+    elif:
     copyString += s[i]
     i += 1 
+    else: 
+    copyString += s[i]
     
-s = copyString
+i += 1 
+
 print(copyString) 
 
 # 
