@@ -56,7 +56,7 @@ print(x is y) # checks if they occupy same memory. Exact same thing
 name = input("Name (ENTER to Quit)  >>>")
  while name != "": # as long as the user does not hit ENTER
      names += name
-    name = input("Name (ENTER to Quit)>>>")
+     name = input("Name (ENTER to Quit)>>>")
     
 print(names)
  
