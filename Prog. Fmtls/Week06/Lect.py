@@ -104,8 +104,9 @@ while i > 50:
 
 i = 7
 
-while i / 7 == 0 and < 100:
+while i <= 100:
     print(i)
+    i += 7
     
 
 
