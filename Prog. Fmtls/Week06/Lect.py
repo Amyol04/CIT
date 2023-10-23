@@ -138,7 +138,8 @@ while i < numChar:
     copyString += s[i]
     i += 1 
     
-print(copyString)
+s = copyString
+print(copyString) 
 
 # 
 
