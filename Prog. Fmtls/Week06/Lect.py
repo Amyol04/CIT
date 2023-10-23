@@ -102,6 +102,11 @@ while i > 50:
 
 ## no do y loop
 
+i = 7
+
+while i / 7 == 0 and < 100:
+    print(i)
+    
 
 
 
