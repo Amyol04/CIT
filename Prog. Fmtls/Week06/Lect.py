@@ -136,9 +136,11 @@ while i < numChar:
     copyString += ''
     else:
     copyString += s[i]
+    i += 1 
     
 print(copyString)
 
+# 
 
 
 
