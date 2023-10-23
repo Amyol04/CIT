@@ -110,4 +110,15 @@ while i <= 100:
     i += 7
 
 ###
+ # adding numbers 
+
+total = 0
+numbers = int(input("Number  (0 to quit) >>>"))
+
+while number != 0:
+    total += number
+    number = int(input("Number  (0 to quit) >>>"))
+    
+print(total) 
+
 
