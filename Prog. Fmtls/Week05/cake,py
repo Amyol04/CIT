@@ -1,0 +1,12 @@
+money = float(input("How much money do you have"))
+cake = input("do you like cake").lower()
+
+if money >= 5 and cake == "yes": 
+    print("we have some cake for you")
+elif money == 5 and cake == "no": 
+    print("we have other options")
+elif money < 5 and cake == "yes": 
+    print("L")
+else:
+    print(" fuck off ")
+    
