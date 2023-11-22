@@ -1,163 +1,150 @@
+# String Operations and Loops
+
+# In Operator
 s = "the rain will never stop"
 
-#in operator - is lhs item in lhs item
+# Note: Using the 'in' operator to check if 'o' is in the string.
 
-if "o" in s 
-    print("there is an o in the sentence")
+if "o" in s:
+    print("There is an 'o' in the sentence")
 
-letter = x 
+# Vowel Check
+letter = 'x'
+
+# Note: Using the 'in' operator to check if the letter is a vowel.
+
 if letter in 'aeiouAEIOU':
     print("Vowel")
-    
-Vowels = 'A','E','I','O','U'
+
+# Vowels Tuple
+Vowels = 'A', 'E', 'I', 'O', 'U'
+
+# Note: Using the 'in' operator to check if the letter is in the Vowels tuple.
 
 if letter in Vowels:
     print("Vowel")
-    
-    
-######## String
 
-Import string
+# String Operations
+import string
+
 s = "The rain will never stop"
 
-print(string.ascii_lowercase) # puts into lower case
-print(string.punctuation)
+# Note: Using string operations to check if the letter is lowercase.
 
-letter = x 
-if letter in string.ascii_lowercase: 
-    print("this is lower case")
-    
-if letter not in string.ascii_lowercase: 
-    print("this is not lower case")
-    
-####
+print(string.ascii_lowercase)  # Prints lowercase alphabet
+print(string.punctuation)  # Prints punctuation characters
 
+# Note: Using string operations to check if the letter is lowercase.
+
+letter = 'x'
+if letter in string.ascii_lowercase:
+    print("This is lowercase")
+
+# Note: Using string operations to check if the letter is not lowercase.
+
+if letter not in string.ascii_lowercase:
+    print("This is not lowercase")
+
+# Memory Check
 x = 9
 y = 9.0
+
+# Note: Using the 'id' function to check the memory location of variables.
+
 print(id(x))
-print(id(y)) # checks memory! 
+print(id(y))  # Checks memory location
 
-print(x == 9) # checks if value is the same.
-print(x is y) # checks if they occupy same memory. Exact same thing 
+# Equality Check
+print(x == 9)  # Checks if value is the same
+print(x is y)  # Checks if they occupy the same memory (Exact same thing)
 
-#dont use is , teacher will murder you
- 
-#### LOOPPPPPS
+# Loop - While Loop
 
-#names = "" 
-#name = input("Name (ENTER to Quit)  >>>")
+# Note: Using a while loop to input names until the user hits ENTER.
 
-#names += name # omented operator. 
-# same as names = names + name
- 
-#### While loop
-
-names = "" 
+names = ""
 name = input("Name (ENTER to Quit)  >>>")
- while name != "": # as long as the user does not hit ENTER
-     names += name
-     name = input("Name (ENTER to Quit)>>>")
-    
-print(names)
- 
-##
 
-numNames = int(input("How many do you have?")) 
+while name != "":
+    names += name
+    name = input("Name (ENTER to Quit)>>>")
+
+print(names)
+
+# Input Number of Names
+num_names = int(input("How many do you have?"))
 counter = 0
- while counter < numNames: # as long as the user does not hit ENTER
-     name = input ("Name (Enter to quit) >>>")
-     name += name
-     counter += 1
-    
+
+# Note: Using a while loop to input names a certain number of times.
+
+while counter < num_names:
+    name = input("Name (Enter to quit) >>>")
+    names += name
+    counter += 1
+
 print(names)
 
-# get names , make string. 
-#####
-
+# While Loop Examples
 i = 0
 
 while i < 50:
     print(i)
-    i += 1 
-
-# will go from 0 to 49. 
-
-i = 0
-
-while i < 50:
-    print(i)
-    i -= 1 
-    
-# will go in -0, ect.. . thete for infante loop
+    i += 1  # Will go from 0 to 49
 
 i = 0
 
 while i > 50:
     print(i)
-    i += 1 
-    
-# 0 Trip. Nothing will happen. 
+    i += 1  # 0 Trip. Nothing will happen.
 
-## no do y loop
-
-## goes up in 7's. 
+# Looping in 7's
 i = 7
 
 while i <= 100:
     print(i)
-    i += 7
+    i += 7  # Goes up in 7's
 
-###
- # adding numbers 
-
+# Adding Numbers
 total = 0
-numbers = int(input("Number  (0 to quit) >>>"))
+number = int(input("Number  (0 to quit) >>>"))
 
 while number != 0:
     total += number
     number = int(input("Number  (0 to quit) >>>"))
-    
-print(total) 
 
-####
-# make a copy of string w every vowel replaced w 'x'
-# and punctuatuon marks replace w x 
+print(total)
 
+# Copy String with Replacements
 s = input("Sentence pls >>>")
-i == 0 # trad name for index variable is i
+i = 0  # Traditional name for the index variable
 
-copyString = ""
-numChar = len(s) # number is characters in s
-#s[0] # 0 == A (first letter)
+copy_string = ""
+num_char = len(s)  # Number of characters in s
 
-while i < numChar: 
-    if s[i] in "AEOIUaeiou"
-    copyString += ''
-    elif:
-    copyString += s[i]
-    i += 1 
-    else: 
-    copyString += s[i]
-    
-i += 1 
+while i < num_char:
+    # Note: Using a while loop to make a copy of the string with every vowel replaced with 'x'.
+    if s[i] in "AEOIUaeiou":
+        copy_string += 'x'
+    else:
+        copy_string += s[i]
+    i += 1
 
-print(copyString) 
+print(copy_string)
 
-# ### 
+# Commission Calculation
+com_rate = 0.03
+num_sales = int(input("How many sales did you make?"))
+counter = 0
+total_com = 0
 
-comRate = .03 
-numSales = int(input("How many sales did you make?"))
-ter = 0
-totalCom = 0
+while counter < num_sales:
+    sale = float(input("Sale Value >>>"))
+    commission = sale * com_rate
+    total_com += commission
 
-while counter < numSales: 
-    sale = float(input(salee Value >>>))
-    comission = sale * comRate 
-    totalCom += comission
-    
-    print(f"€{sale :.2f} earned you €{comission:.2f} in commission")
-    
-    counter += 1 
+    print(f"€{sale:.2f} earned you €{commission:.2f} in commission")
 
-print(output)
-print(f"Total earned: €{totalCom:.2f}")
+    counter += 1
+
+print(output)  # Note: 'output' is not defined; consider using 'print' instead.
+print(f"Total earned: €{total_com:.2f}")
