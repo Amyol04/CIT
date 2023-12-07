@@ -1,5 +1,0 @@
-Saol,life
-Sláinte,health
-Brosna,stream
-Cat,cat
-Leabhar,book
