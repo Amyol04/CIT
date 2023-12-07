@@ -1,5 +1,0 @@
-Gealach,moon
-Damhán alla,spider
-Talamh,earth
-Rí,king
-Sneachta,snow
