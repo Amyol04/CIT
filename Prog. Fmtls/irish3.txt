@@ -1,5 +1,0 @@
-Uisce,water
-Crann,tree
-Éireannach,irish 
-Cáca,cake
-Lá,day
