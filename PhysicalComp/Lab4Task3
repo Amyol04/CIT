@@ -1,0 +1,54 @@
+int sensorValue;
+int sensorLow = 1023;
+int sensorHigh = 0;
+const int LED_PIN = 13;
+const int BUTTON_PIN = 2; // Assuming the push-button switch is connected to digital pin 2
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW); // Initially turning off the LED
+  
+  pinMode(BUTTON_PIN, INPUT_PULLUP); // Configuring the button pin as input with internal pull-up resistor
+  
+  // calibrate for the first five seconds after program runs
+  while (millis() < 5000) {
+    sensorValue = analogRead(A0);
+    if (sensorValue > sensorHigh) {
+      sensorHigh = sensorValue;
+    }
+    if (sensorValue < sensorLow) {
+      sensorLow = sensorValue;
+    }
+  }
+}
+
+void loop() {
+  // Check the state of the push button
+  if (digitalRead(BUTTON_PIN) == LOW) { // If the button is pressed
+    digitalWrite(LED_PIN, HIGH); // Turn on the LED
+  } else {
+    digitalWrite(LED_PIN, LOW); // Turn off the LED
+  }
+  
+  sensorValue = analogRead(A0);
+  
+  // map the sensor values to a wide range of pitches
+  int pitch = map(sensorValue, sensorLow, sensorHigh, 50, 4000);
+  
+  // play the tone for 20 ms on pin 8
+  tone(8, pitch, 20);
+  
+  // wait for 10 ms to give sound time to play
+  delay(10);
+
+  float voltage = 5.0 * (sensorValue / 1023.0);
+
+  //cal resistance 
+  float resistance = 4700.0 * (voltage) / (5.0 - voltage);
+
+  // print resistance 
+  Serial.print("LDR Resistance: ");
+  Serial.print(resistance);
+  Serial.println(" ohms");
+  delay(100); 
+}
