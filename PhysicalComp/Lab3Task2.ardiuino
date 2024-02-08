@@ -1,0 +1,45 @@
+int sensorValue;
+int sensorLow = 1023;
+int sensorHigh = 0;
+const int LED_PIN = 13;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, HIGH);
+  
+  // calibrate for the first five seconds after program runs
+ while (millis() < 5000) {
+  sensorValue = analogRead(A0);
+  if (sensorValue > sensorHigh) {
+    sensorHigh = sensorValue;
+}
+ if (sensorValue < sensorLow) {
+  sensorLow = sensorValue;
+  }
+}
+  // turn the LED off, signaling the end of the calibration period
+  digitalWrite(LED_PIN, LOW);
+}
+void loop() {
+  sensorValue = analogRead(A0);
+  
+  // map the sensor values to a wide range of pitches
+  int pitch = map(sensorValue, sensorLow, sensorHigh, 50, 4000);
+  
+  // play the tone for 20 ms on pin 8
+  tone(8, pitch, 20);
+  
+  // wait for 10 ms to give sound time to play
+  delay(10);
+
+  float voltage = 5.0 * (sensorValue / 1023.0);
+
+  //cal resistance 
+  float resistence= 4700.0 * (voltage) / (5.0 - voltage);
+
+  // print resistence 
+  Serial.print("LDR Resistence");
+  Serial.print( resistence);
+  Serial.println("ohms");
+  delay(100); 
+}
