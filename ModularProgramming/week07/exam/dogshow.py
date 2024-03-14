@@ -1,4 +1,3 @@
-# Roche_John_Lab_Exam.py
 # Amy o leary
 # R00246749
 # dog show code 
