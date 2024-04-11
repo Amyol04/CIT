@@ -41,3 +41,54 @@ while True:
     print("LDR value =", ldr)  # corrected line, added missing closing parenthesis and added ldr variable
     time.sleep(1)
 
+
+## python 
+import smbus
+import time
+import dweepy
+
+i2c = smbus.SMBus(1)
+address = 0x40
+
+while True:
+    ldr = i2c.read_byte(address)
+    print("LDR value =", ldr)
+    dweepy.dweet_for('<your-thing-name>', {'ldr': ldr})  # corrected line, added 'ldr' key for the value
+    time.sleep(1)
+    i2c.write_byte(address, ldr)  # corrected line, added the value to be written to the Arduino
+    time.sleep(1)
+
+
+## ardiono 
+#include <Wire.h>
+#define SLAVE_ADDRESS 0x40 // define I2C address
+byte response[2]; // data to be sent to Pi
+volatile short ldrVal, pwmVal;
+const int LDR_PIN = A0;
+const int PWM_PIN = 4;
+
+void setup(){
+  Wire.begin(SLAVE_ADDRESS); // begin I2C connection with 0x40 address
+  Wire.onRequest(sendData); // sendData is function called when Pi requests data
+  Wire.onReceive(receiveData);
+  pinMode(PWM_PIN, OUTPUT);
+}
+
+void loop(){
+  delay(1000);
+}
+
+void sendData(){
+  ldrVal = analogRead(LDR_PIN); // Arduino returns 10-bit data
+  ldrVal = map(ldrVal,0,1023,0,255); // Convert to 8-bit
+  response[0] = (byte)ldrVal;
+  Wire.write(response, 2); // Write data to Pi
+}
+
+void receiveData(int byteCount){
+  while(Wire.available()){
+    pwmVal = Wire.read(); // Read data from Pi
+    analogWrite(PWM_PIN, pwmVal); // Send PWM signal to LED, corrected line, added pwmVal as argument
+  }
+}
+
