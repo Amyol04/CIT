@@ -31,3 +31,13 @@ void sendData(){
   Wire.write(response,2); // Write data to Pi
 }
 
+
+import smbus as smbus
+import time
+i2c = smbus.SMBus(1)
+address = 0x40
+while True:
+    ldr = i2c.read_byte(address)
+    print("LDR value =", ldr)  # corrected line, added missing closing parenthesis and added ldr variable
+    time.sleep(1)
+
