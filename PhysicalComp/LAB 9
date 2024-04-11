@@ -7,3 +7,27 @@ void loop() {
   Serial.println(sensorVal);
   delay(1000);
 }
+
+
+#include <Wire.h>
+#define SLAVE_ADDRESS 0x40 // define I2C address
+byte response[2]; // data to be sent to Pi
+volatile short ldrVal; // corrected variable name
+const int LDR_PIN = A0;
+
+void setup(){
+  Wire.begin(SLAVE_ADDRESS); // begin I2C connection with 0x40 address
+  Wire.onRequest(sendData); // sendData is function called when Pi requests data
+}
+
+void loop(){
+  delay(1000);
+}
+
+void sendData(){
+  ldrVal = analogRead(LDR_PIN); // Arduino returns 10-bit data
+  ldrVal = map(ldrVal,0,1023,0,255); // Corrected map range (0-1023 for 10-bit ADC)
+  response[0] = (byte)ldrVal;
+  Wire.write(response,2); // Write data to Pi
+}
+
