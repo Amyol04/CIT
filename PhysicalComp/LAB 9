@@ -1,0 +1,9 @@
+void setup() {
+  Serial.begin(9600); // Add this line to initialize serial communication
+}
+
+void loop() {
+  int sensorVal = analogRead(3);
+  Serial.println(sensorVal);
+  delay(1000);
+}
