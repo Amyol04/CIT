@@ -1,0 +1,62 @@
+text editors:
+gedit = gui
+nano = cli
+--------------------------------------------------------------------------------------
+touch - creates a txt file
+--------------------------------------------------------------------------------------
+stop a process - control c
+--------------------------------------------------------------------------------------
+ls -l
+rwxrwxrwx {hardlinkNo} {Owner} {Owner} {byte size} {ModdedMonth} {ModdedDay} {ModdedTime} {fileName}
+
+white - file
+dark blue - folder
+light blue - link
+--------------------------------------------------------------------------------------
+ps aux
+lists {user} {PID} {CPU%} {MEM%} {blah} {blah} {command}
+--------------------------------------------------------------------------------------
+ln {File}
+makes a hardlink to a file. Synched dupe but doesn't corrupt if the original is deleted
+--------------------------------------------------------------------------------------
+ln -s {File}
+makes a softlink to a file. Synched dupe but does corrupt if the original is deleted
+--------------------------------------------------------------------------------------
+sudo apt install - install a new package or a newer version of an already installed package on the system
+sudo apt upgrade - upgrades the installed packages to the latest available versions
+sudo apt update - updates the package lists
+--------------------------------------------------------------------------------------
+bash
+runs a file as a set of terminal commands
+--------------------------------------------------------------------------------------
+head/tail -{n} {file}
+shows the first/last n lines of a file
+--------------------------------------------------------------------------------------
+echo "{data}"
+prints data into the cli
+-----------------------------------------------------------------------------------
+>
+redirect output, open as write
+-----------------------------------------------------------------------------------
+>>
+redirect output, Open as append
+---------------------------------------------------------------------------
+|
+Pipe operator for joining commands (i.e cat | grep)
+---------------------------------------------------------------------------
+sudo fdisk -l
+--------------------------------------------------------------------------------------
+grep {data} {file}
+looks for and highlights words / only gets rows with {data}
+--------------------------------------------------------------------------------------
+at now + {n} minutes –f {script}
+run a line of a script every n minutes
+--------------------------------------------------------------------------------------
+whoami
+Displays current user
+--------------------------------------------------------------------------------------
+Sudo useradd
+Adds a user with no config
+--------------------------------------------------------------------------------------
+Sudo adduser
+Adds a user with full config
