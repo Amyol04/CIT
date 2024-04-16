@@ -1,0 +1,31 @@
+``` * Cat— print the content of the file.
+
+* Bash or ./ — executes the content of the file.
+
+* Grep — find the pattern in the file by typing — grep “the word repeated” “the file name”.
+
+* Man — explains what a command do — man cat —- explains that the command cat print the content of file.
+
+* Gedit — interface based file editor.
+
+* Nano — command based file editor.
+
+* Mkdir — creates directory.
+
+* Tail — prints the last 10 lines of a file use -n after the command to specify number of lines to be printed — tail -6 “file name” — prints last 6 lines.
+
+* Tree — show the content of a directory in a tree like representation.
+
+* Env — to display a long list of environment variables. 
+
+* Echo $ — to display the content of the variable named after the $.
+
+* | — called a pipe which take the output of a program to be input in another — ls -l | grep “the” — in this line it takes the output of ls -l which list files and directories in long format is piped to the grep command which only displays lines containing “the” word.
+
+* > — used for redirection. Specifically, it is used to redirect the output of a command to a file. When you use >, it will create a new file if it doesn't exist or overwrite the contents of an existing file. For example:echo "Hello, world!" > greeting.txt.
+
+* >> — used for redirection, but it appends the output of a command to a file rather than overwriting it. If the file doesn't exist, it will be created. If it does exist, the output will be appended to the end of the file. For example:echo "Goodbye, world!" >> greeting.txt.
+* Chmod — changes the file permission    user/ group/ other    —  u+x or g -r.
+
+* Cp — copies the content of a file to a new file — cp file1 file2 — this copies content of file1 to file2.
+ ```
