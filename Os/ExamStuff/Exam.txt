@@ -1,4 +1,4 @@
-``` * Cat— print the content of the file.
+* Cat— print the content of the file.
 
 * Bash or ./ — executes the content of the file.
 
@@ -28,4 +28,3 @@
 * Chmod — changes the file permission    user/ group/ other    —  u+x or g -r.
 
 * Cp — copies the content of a file to a new file — cp file1 file2 — this copies content of file1 to file2.
- ```
